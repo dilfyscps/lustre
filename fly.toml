@@ -1,0 +1,16 @@
+app = "lustre"
+primary_region = "iad"
+
+[build]
+
+[env]
+  DATA_DIR = "/data"
+  POST_INTERVAL_MINUTES = "30"
+
+[[mounts]]
+  source = "lustre_data"
+  destination = "/data"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"
